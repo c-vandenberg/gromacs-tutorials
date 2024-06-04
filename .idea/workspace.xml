@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/posre_Protein_chain_A.itp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_A.itp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/posre_Protein_chain_L.itp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_L.itp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol.top" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol.top" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol_Protein_chain_A.itp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_A.itp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol_Protein_chain_L.itp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_L.itp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/1fjs_processed.gro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_A.itp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_L.itp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_A.itp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_L.itp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/simulation-parameters/1fjs_newbox.gro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/1fjs_solv.gro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/1fjs_solv_ions.gro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/ions.mdp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/ions.tpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol.top" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +45,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein" />
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent" />
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/simulation-parameters" />
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein" />
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints" />
     </key>
   </component>

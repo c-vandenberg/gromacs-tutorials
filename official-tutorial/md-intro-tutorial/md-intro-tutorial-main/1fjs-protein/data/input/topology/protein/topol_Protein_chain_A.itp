@@ -1,19 +1,19 @@
 ;
-;	File 'topol_Protein_chain_A.itp' was generated
+;	File 'protein/topol_Protein_chain_A.itp' was generated
 ;	By user: chris-vdb (1000)
 ;	On host: chris-B550-AORUS-ELITE-AX-V2
-;	At date: Mon Jun  3 23:40:41 2024
+;	At date: Tue Jun  4 13:43:04 2024
 ;
 ;	This is a include topology file
 ;
 ;	Created by:
-;	         :-) GROMACS - gmx pdb2gmx, 2023.3-Ubuntu_2023.3_1ubuntu3 (-:
+;	              :-) GROMACS - gmx pdb2gmx, 2023.3-conda_forge (-:
 ;	
-;	Executable:   /usr/bin/gmx
-;	Data prefix:  /usr
-;	Working dir:  /home/chris-vdb/Computational-Chemistry/gromacs-tutorials/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/1fjs_protein/raw/topology
+;	Executable:   /home/chris-vdb/anaconda3/envs/md-intro-tutorial/bin.AVX2_256/gmx
+;	Data prefix:  /home/chris-vdb/anaconda3/envs/md-intro-tutorial
+;	Working dir:  /home/chris-vdb/Computational-Chemistry/gromacs-tutorials/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology
 ;	Command line:
-;	  gmx pdb2gmx -f ../1fjs_protein.pdb -o 1fjs_processed.gro -water tip3p -ff charmm27
+;	  gmx pdb2gmx -f protein/1fjs_protein.pdb -o 1fjs_processed.gro -p protein/topol.top -i position-restraints/porse.itp -water tip3p -ff charmm27
 ;	Force field was read from the standard GROMACS share directory.
 ;
 
@@ -34587,6 +34587,6 @@ Protein_chain_A     3
 
 ; Include Position restraint file
 #ifdef POSRES
-#include "posre_Protein_chain_A.itp"
+#include "position-restraints/porse_Protein_chain_A.itp"
 #endif
 
