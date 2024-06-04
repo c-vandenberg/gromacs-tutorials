@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="" />
+    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/1fjs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/protein/1fjs.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/emin-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/energy-minimization/emin-amber.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/emin-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/energy-minimization/emin-charmm.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/md-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/molecular-dynamics/md-amber.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/md-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/molecular-dynamics/md-charmm.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-equilibration/npt-amber.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-equilibration/npt-charmm.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration/nvt-amber.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration/nvt-charmm.mdp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/src/init_notebooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/notebooks/init_notebooks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/tutorial.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,21 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/molecular-dynamics-intro&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/chris-vdb/Computational-Chemistry/gromacs-tutorials&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.__main__.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/molecular-dynamics-intro",
+    "last_opened_file_path": "/home/chris-vdb/Computational-Chemistry/lammps-tutorials/simon-gravelle/md_analysis_tutorial/python/src/modules/line_graph.py",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/simulation-parameters" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/notebooks" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/protein" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -56,5 +80,16 @@
       <updated>1717439173987</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
