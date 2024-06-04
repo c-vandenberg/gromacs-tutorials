@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import os
-import pandas
 import numpy
-import matplotlib.pyplot as pyplot
 
 from typing import List
 
@@ -24,13 +22,13 @@ def main():
     time -= time[0]
 
     # Combine time and potential energy
-    ave_pot_energy_vs_time: List[numpy.ndarray] = [
+    temperature_vs_time_data: List[numpy.ndarray] = [
         numpy.vstack((time, temperature))
     ]
 
-    ave_pot_energy_vs_timestep_line_graph = LineGraph()
-    ave_pot_energy_vs_timestep_line_graph.single_line_graph(
-        data_arrays=ave_pot_energy_vs_time,
+    temperature_vs_timestep_line_graph = LineGraph()
+    temperature_vs_timestep_line_graph.single_line_graph(
+        data_arrays=temperature_vs_time_data,
         figure_size=(18, 10),
         line_colours='cyan',
         x_label=r'$t$ (ps)',

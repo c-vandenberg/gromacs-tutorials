@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import os
-import pandas
 import numpy
-import matplotlib.pyplot as pyplot
 
 from typing import List
 
