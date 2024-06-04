@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/1fjs_processed.gro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_A.itp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/position-restraints/posre_Protein_chain_L.itp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_A.itp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/protein/topol_Protein_chain_L.itp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/simulation-parameters/1fjs_newbox.gro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/1fjs_solv.gro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/1fjs_solv_ions.gro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/ions.mdp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/solvent/ions.tpr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology/topol.top" beforeDir="false" />
-    </list>
+    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
