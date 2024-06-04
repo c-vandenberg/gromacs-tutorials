@@ -39,9 +39,12 @@
 
 [ system ]
 ; Name
-COAGULATION FACTOR XA; COAGULATION FACTOR XA
+COAGULATION FACTOR XA; COAGULATION FACTOR XA in water
 
 [ molecules ]
 ; Compound        #mols
 Protein_chain_A     1
 Protein_chain_L     1
+SOL         11703
+NA               38
+CL               36
