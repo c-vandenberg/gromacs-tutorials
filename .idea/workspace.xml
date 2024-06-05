@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/1fjs.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/protein/1fjs.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/emin-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/energy-minimization/emin-amber.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/emin-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/energy-minimization/emin-charmm.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/md-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/molecular-dynamics/md-amber.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/md-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/molecular-dynamics/md-charmm.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-equilibration/npt-amber.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/npt-equilibration/npt-charmm.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-amber.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration/nvt-amber.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-charmm.mdp" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration/nvt-charmm.mdp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/src/init_notebooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/notebooks/init_notebooks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/tutorial.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/notebooks/.ipynb_checkpoints/em-pot-energy-vs-time-plot-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/notebooks/.ipynb_checkpoints/em-pot-energy-vs-time-plot-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/notebooks/em-pot-energy-vs-time-plot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/notebooks/em-pot-energy-vs-time-plot.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/reports/figures/graphs/potential-energy-vs-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/reports/figures/graphs/potential-energy-vs-time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/notebooks/.ipynb_checkpoints/npt-equilibration-pressure-density-vs-time-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/notebooks/.ipynb_checkpoints/npt-equilibration-pressure-density-vs-time-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/notebooks/npt-equilibration-pressure-density-vs-time.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/notebooks/npt-equilibration-pressure-density-vs-time.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/python/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/python/src/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/reports/figures/graphs/density-vs-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/reports/figures/graphs/density-vs-time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/reports/figures/graphs/pressure-vs-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/reports/figures/graphs/pressure-vs-time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/notebooks/.ipynb_checkpoints/nvt-equilibration-temp-vs-time-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/notebooks/.ipynb_checkpoints/nvt-equilibration-temp-vs-time-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/notebooks/nvt-equilibration-temp-vs-time.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/notebooks/nvt-equilibration-temp-vs-time.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/python/src/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/python/src/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/reports/figures/graphs/temp-vs-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/reports/figures/graphs/temp-vs-time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +45,112 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/molecular-dynamics-intro",
-    "last_opened_file_path": "/home/chris-vdb/Computational-Chemistry/lammps-tutorials/simon-gravelle/md_analysis_tutorial/python/src/modules/line_graph.py",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1FJS Protein Energy MInimization.executor&quot;: &quot;Run&quot;,
+    &quot;Python.1FJS Protein NPT Equilibration.executor&quot;: &quot;Run&quot;,
+    &quot;Python.1FJS Protein NVT Equilibration.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/molecular-dynamics-intro&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/chris-vdb/Computational-Chemistry/gromacs-tutorials/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/protein&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/protein" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/npt-equilibration" />
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/notebooks" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/protein" />
-      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/data/input/nvt-equilibration" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/nvt-equilibration" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/python/src/modules" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/protein/data/topology/protein" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data/processed" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data" />
+      <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/protein/data/processed" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.1FJS Protein NPT Equilibration">
+    <configuration name="1FJS Protein Energy MInimization" type="PythonConfigurationType" factoryName="Python">
+      <module name="gromacs-tutorials" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="GROMACS_PYTHON_BASE_PATH" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/python/src" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="md-intro-tutorial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1FJS Protein NPT Equilibration" type="PythonConfigurationType" factoryName="Python">
+      <module name="gromacs-tutorials" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="GROMACS_PYTHON_BASE_PATH" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/python/src" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="md-intro-tutorial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/npt-equilibration/data-analysis/python/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/npt-equilibration/data-analysis/python/src/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1FJS Protein NVT Equilibration" type="PythonConfigurationType" factoryName="Python">
+      <module name="gromacs-tutorials" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="GROMACS_PYTHON_BASE_PATH" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/python/src" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="md-intro-tutorial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/nvt-equilibration/data-analysis/python/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/nvt-equilibration/data-analysis/python/src/__main__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.1FJS Protein NPT Equilibration" />
+      <item itemvalue="Python.1FJS Protein NVT Equilibration" />
+      <item itemvalue="Python.1FJS Protein Energy MInimization" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -85,9 +174,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/energy-minimization/data-analysis/python/src/__main__.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/nvt-equilibration/data-analysis/python/src/__main__.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/python/src/__main__.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

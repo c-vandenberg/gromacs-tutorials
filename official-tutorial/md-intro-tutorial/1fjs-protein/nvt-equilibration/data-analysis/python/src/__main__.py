@@ -35,9 +35,9 @@ def main():
         y_label=r'$Temperature$ (K)',
         y_lim=(295, 305),
         x_lim=(0, 80),
-        graph_title=r'$\bf{Protein\ 1FJS\ Temperature\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of protein 1FJS temperature as a function of time during NVT ensemble '
-                    r'equilibration',
+        graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Temperature\ vs\ Time}$',
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system temperature as a function of time during '
+                    r'NVT ensemble equilibration',
         figure_text_font_size=15,
         font_size=20,
         label_size=20,

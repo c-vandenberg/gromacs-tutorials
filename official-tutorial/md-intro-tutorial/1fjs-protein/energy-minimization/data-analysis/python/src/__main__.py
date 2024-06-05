@@ -34,8 +34,8 @@ def main():
         y_label=r'$Potential\ Energy$ (KJ/mol)',
         y_lim=(-630000, -155000),
         x_lim=(0, 10),
-        graph_title=r'$\bf{Protein\ 1FJS\ Potential\ Energy\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of protein 1FJS average potential energy as a function of time '
+        graph_title=r'$\bf{Coagulation\ Factor\ Xa\ Potential\ Energy\ vs\ Time}$',
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa average potential energy as a function of time '
                     r'during steepest descent minimization',
         figure_text_font_size=15,
         font_size=20,

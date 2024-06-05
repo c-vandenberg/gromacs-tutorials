@@ -31,9 +31,9 @@ def main():
         y_label=r'$Pressure$ (Bar)',
         y_lim=(-5250, 500),
         x_lim=(0, 100),
-        graph_title=r'$\bf{Protein\ 1FJS\ Pressure\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of protein 1FJS pressure as a function of time during NPT ensemble '
-                    r'equilibration',
+        graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Pressure\ vs\ Time}$',
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system pressure as a function of time during '
+                    r'NPT ensemble equilibration',
         figure_text_font_size=15,
         font_size=20,
         label_size=20,
@@ -58,9 +58,9 @@ def main():
         y_label=r'$Density$ (kg/m$^{3}$)',
         y_lim=(1000, 1050),
         x_lim=(0, 100),
-        graph_title=r'$\bf{Protein\ 1FJS\ Density\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of protein 1FJS density as a function of time during NPT ensemble '
-                    r'equilibration',
+        graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Density\ vs\ Time}$',
+        figure_text=r'$\bf{Fig\ 2}$ Evolution of coagulation factor Xa system density as a function of time during NPT '
+                    r'ensemble equilibration',
         figure_text_font_size=15,
         font_size=20,
         label_size=20,
