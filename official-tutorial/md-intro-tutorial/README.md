@@ -14,33 +14,11 @@ The 3D structure of Factor Xa is available from the protein data bank (PDB), wit
 
 ## Simulation Commands
 
-### Equilibration Run - Temperature (NVT Ensemble Equilibration)
-1. Energy minimization has given us a reasonable starting structure in terms of protein geometry and solvent orientation
-2. However, before the MD simulation we must equilibrate the solvent and ions around the protein. If we were to attempt an MD simulation without this, the system may collapse as the solvent is mostly optimised within itself, not necessarily with the solute, and ions have been randomly placed
-3. Within the `topol.top` file, there are `porse.itp` position restraint files that apply a position restraining force on the heavy atoms of the protein (i.e. anything that is not H). Movement is permitted, but only after overcoming a substantial energy penalty
-4. These position restraints allow us to relax the solvent and ions around the protein, without the added variable of structural changes in the protein
-5. To use position restraints, we have added the following line to the NVT equilibration simulation parameter file (`nvt-charmm.mdp`)
-	`define                  = -DPOSRES  ; position restrain the protein`
-6. Equilibration of temperature is conduted under a NVT ensemble. This ensemble is also called the 'isothermal-isochoric' ensemble
-7. The NVT equilibration simulation parameter file (`nvt-charmm.mdp`) uses a modified Berendsen thermostat to control temperature, and specifies a 100 ps NVT equilibration
-8. Navigate to `1fjs-protein/protein/topology/protein`
-	`gmx grompp -f ../../../../nvt-equilibration/data/input/nvt-charmm.mdp -c ../../../../energy-minimization/data/processed/em.gro -r ../../../../energy-minimization/data/processed/em.gro -p topol.top -o nvt.tpr`
-	`mv nvt.tpr ../../../../nvt-equilibration/data/processed`
-	`mv mdout.mdp ../../../../nvt-equilibration/data/processed`
-9. Navigate to `1fjs-protein/nvt-equilibration/data/processed`
-	`gmx mdrun -ntmpi 1 -v -deffnm nvt`
-10. The `-ntmpi 1` flag specifies the number of Message Passing Interface (MPI) ranks to use. Here we are using only one, so we are not taking advantage of parallel execution. If we were to specify 4 MPI ranks for example (`-ntmpi 4`), if on a single computer (as is the case here), the simulation workload could be distributed between separate CPU cores
-
-### NVT Ensemble Equilibration Data Analysis
-1. Navigate to `1fjs-protein/nvt-equilibration/data-analysis`
-2. Analyse temperature & time data via Python & JupyterLab
-	`echo "Temperature" | gmx energy -f ../data/processed/nvt.edr -o temperature.xvg -xvg none -b 20`
-
 ### Equilibration Run - Pressure (NPT Ensemble Equilibration)
 1. The NVT ensemble equilibration stabilises the temperature of the system 
 2. Prior to the MD simulation, we must also stabilise the pressure (and thus the density) of the system
 3. Equilibration of pressure is conducted under an NPT ensemble. This ensemble is also called the 'isothermal-isobaric' ensemble, and most closely resembles experimental conditions
-4. The NPT equilibration simulation parameter file (`npt-charmm.mdp`) uses a Berendsen barostat to control pressure, and specifies a 100 ps NPT equilibration
+4. The NPT equilibration simulation parameter file (`npt-charmm.mdp`) uses the Berendsen barostat to control pressure, and specifies a 100 ps NPT equilibration
 5. Navigate to `1fjs-protein/data/input/topology/protein`
 	`gmx grompp -f ../../../../npt-equilibration/data/input/npt-charmm.mdp -c ../../../../energy-minimization/data/processed/em.gro -r ../../../../energy-minimization/data/processed/em.gro -p topol.top -o npt.tpr`
 	`mv npt.tpr ../../../../npt-equilibration/data/processed`
