@@ -23,26 +23,22 @@ def main():
     # Multiply time by emstep to get time in picoseconds
     time *= 0.01
 
-    # Combine time and potential energy
-    ave_pot_energy_vs_time: List[numpy.ndarray] = [
-        numpy.vstack((time, potential_energy))
-    ]
-
-    ave_pot_energy_vs_timestep_line_graph = LineGraph()
-    ave_pot_energy_vs_timestep_line_graph.single_line_graph(
-        data_arrays=ave_pot_energy_vs_time,
+    LineGraph.single_line_graph(
+        data_arrays=[numpy.vstack((time, potential_energy))],
         figure_size=(18, 10),
         line_colours='cyan',
         x_label=r'$t$ (ps)',
         y_label=r'$Potential\ Energy$ (KJ/mol)',
-        y_lim=(-630000, -155000),
         x_lim=(0, 10),
+        y_lim=(-630000, -155000),
         graph_title=r'$\bf{Coagulation\ Factor\ Xa\ Potential\ Energy\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa average potential energy as a function of time '
-                    r'during steepest descent minimization',
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system temperature during NVT ensemble '
+                    r'equilibration, as a function of time',
         figure_text_font_size=15,
+        figure_text_x_coord=0.5,
+        figure_text_y_coord=-0.0005,
         font_size=20,
-        label_size=20,
+        tick_label_size=20,
         line_width=2
     )
 

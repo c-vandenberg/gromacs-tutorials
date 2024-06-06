@@ -24,27 +24,23 @@ def main():
     # at zero
     time -= time[0]
 
-    # Combine time and potential energy
-    temperature_vs_time_data: List[numpy.ndarray] = [
-        numpy.vstack((time, temperature))
-    ]
-
-    temperature_vs_timestep_line_graph = LineGraph()
-    temperature_vs_timestep_line_graph.single_line_graph(
-        data_arrays=temperature_vs_time_data,
-        figure_size=(18, 10),
-        line_colours='cyan',
-        x_label=r'$t$ (ps)',
+    LineGraph.single_line_graph(
+        data_arrays=[numpy.vstack((time, temperature))],
+        figure_size=(18, 6),
+        line_colours=['cyan'],
+        x_label='$t$ (ps)',
         y_label=r'$Temperature$ (K)',
-        y_lim=(295, 305),
         x_lim=(0, 80),
+        y_lim=(295, 305),
         graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Temperature\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system temperature as a function of time during '
-                    r'NVT ensemble equilibration',
-        figure_text_font_size=15,
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system temperature during NVT ensemble '
+                    r'equilibration, as a function of time.',
+        figure_text_font_size=20,
+        figure_text_x_coord=0.5,
+        figure_text_y_coord=-0.0005,
         font_size=20,
-        label_size=20,
-        line_width=3.5
+        tick_label_size=20,
+        line_width=3
     )
 
 

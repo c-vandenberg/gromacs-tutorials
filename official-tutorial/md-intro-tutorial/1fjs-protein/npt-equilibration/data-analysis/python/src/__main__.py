@@ -20,54 +20,46 @@ def main():
         os.path.join(npt_equilibration_processed_data_path, 'pressure.xvg')
     ).T
 
-    # Combine time and potential energy
-    pressure_vs_time: List[numpy.ndarray] = [
-        numpy.vstack((time, pressure))
-    ]
-
-    pressure_vs_time_line_graph = LineGraph()
-    pressure_vs_time_line_graph.single_line_graph(
-        data_arrays=pressure_vs_time,
-        figure_size=(18, 10),
-        line_colours='cyan',
-        x_label=r'$t$ (ps)',
+    LineGraph.single_line_graph(
+        data_arrays=[numpy.vstack([time, pressure])],
+        figure_size=(18, 6),
+        line_colours=['cyan'],
+        x_label='$t$ (ps)',
         y_label=r'$Pressure$ (Bar)',
-        y_lim=(-5250, 500),
         x_lim=(0, 100),
+        y_lim=(-5250, 500),
         graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Pressure\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system pressure as a function of time during '
-                    r'NPT ensemble equilibration',
-        figure_text_font_size=15,
+        figure_text=r'$\bf{Fig\ 1}$ Evolution of coagulation factor Xa system pressure during NVT ensemble '
+                    r'equilibration, as a function of time.',
+        figure_text_font_size=20,
+        figure_text_x_coord=0.5,
+        figure_text_y_coord=-0.0005,
         font_size=20,
-        label_size=20,
-        line_width=3.5
+        tick_label_size=20,
+        line_width=3
     )
 
     _, density = numpy.loadtxt(
         os.path.join(npt_equilibration_processed_data_path, 'density.xvg')
     ).T
 
-    # Combine time and potential energy
-    density_vs_time_data: List[numpy.ndarray] = [
-        numpy.vstack((time, density))
-    ]
-
-    density_vs_time_line_graph = LineGraph()
-    density_vs_time_line_graph.single_line_graph(
-        data_arrays=density_vs_time_data,
-        figure_size=(18, 10),
-        line_colours='cyan',
-        x_label=r'$t$ (ps)',
+    LineGraph.single_line_graph(
+        data_arrays=[numpy.vstack([time, density])],
+        figure_size=(18, 6),
+        line_colours=['cyan'],
+        x_label='$t$ (ps)',
         y_label=r'$Density$ (kg/m$^{3}$)',
-        y_lim=(1000, 1050),
         x_lim=(0, 100),
+        y_lim=(1000, 1050),
         graph_title=r'$\bf{Coagulation\ Factor\ Xa\ System\ Density\ vs\ Time}$',
-        figure_text=r'$\bf{Fig\ 2}$ Evolution of coagulation factor Xa system density as a function of time during NPT '
-                    r'ensemble equilibration',
-        figure_text_font_size=15,
+        figure_text=r'$\bf{Fig\ 2}$ Evolution of coagulation factor Xa system density during NVT ensemble '
+                    r'equilibration, as a function of time.',
+        figure_text_font_size=20,
+        figure_text_x_coord=0.5,
+        figure_text_y_coord=-0.0005,
         font_size=20,
-        label_size=20,
-        line_width=3.5
+        tick_label_size=20,
+        line_width=3,
     )
 
 

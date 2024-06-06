@@ -71,11 +71,12 @@ class LineGraph:
 
     @staticmethod
     def single_line_graph(data_arrays: List[ndarray], figure_size: Tuple[int, int],
-                          line_colours: List, x_label: str, y_label: str, y_lim: Tuple, x_lim: Tuple, graph_title: str,
+                          line_colours: List, x_label: str, y_label: str, x_lim: Tuple, y_lim: Tuple, graph_title: str,
                           figure_text: str, figure_text_font_size: Union[int, float],
-                          line_figure_x_coord: Union[int, float], line_figure_y_coord: Union[int, float],
-                          font_size: Union[int, float], label_size: Union[int, float], line_width: Union[int, float],
-                          save_path: Union[str, None] = None, line_labels: Union[List, None] = None):
+                          figure_text_x_coord: Union[int, float], figure_text_y_coord: Union[int, float],
+                          font_size: Union[int, float], tick_label_size: Union[int, float],
+                          line_width: Union[int, float], save_path: Union[str, None] = None,
+                          line_labels: Union[List, None] = None):
         """
         Create a single line graph with single or multiple lines.
 
@@ -91,23 +92,23 @@ class LineGraph:
             Label for the x-axis.
         y_label : str
             Label for the y-axis.
-        y_lim : Tuple[float, float]
-            Limits for the y-axis.
         x_lim : Tuple[float, float]
             Limits for the x-axis.
+        y_lim : Tuple[float, float]
+            Limits for the y-axis.
         graph_title : str
             Title for the graph.
         figure_text : str
             Additional text to display at the bottom of the figure.
         figure_text_font_size: int
             Font size for the text displayed at the bottom of the figure.
-        line_figure_x_coord : Union[int, float]
-            Line figure x-coordinate.
-        line_figure_y_coord : Union[int, float]
-            Line figure y-coordinate.
+        figure_text_x_coord : Union[int, float]
+            Figure text x-coordinate.
+        figure_text_y_coord : Union[int, float]
+            Figure text y-coordinate.
         font_size : Union[int, float]
             Font size for the axis labels, tick labels and title.
-        label_size : Union[int, float]
+        tick_label_size : Union[int, float]
             Font size for the tick labels.
         line_width : Union[int, float]
             Width of the lines in the plot.
@@ -126,7 +127,7 @@ class LineGraph:
         line_graph_axes.set_facecolor('black')
 
         # Stylise ticks and spines
-        line_graph_axes.tick_params(colors='white', which='both', labelsize=label_size)
+        line_graph_axes.tick_params(colors='white', which='both', labelsize=tick_label_size)
         for spine in line_graph_axes.spines.values():
             spine.set_edgecolor('white')
 
@@ -154,8 +155,8 @@ class LineGraph:
             for text in legend.get_texts():
                 text.set_color('white')
 
-        # Add figure title
-        line_graph.text(line_figure_x_coord, line_figure_y_coord, figure_text, ha='center', va='center',
+        # Add figure text
+        line_graph.text(figure_text_x_coord, figure_text_y_coord, figure_text, ha='center', va='center',
                         color='white', fontsize=figure_text_font_size)
 
         if save_path:
