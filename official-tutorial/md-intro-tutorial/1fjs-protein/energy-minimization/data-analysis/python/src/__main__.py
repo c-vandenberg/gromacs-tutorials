@@ -13,8 +13,11 @@ from modules.line_graph import LineGraph
 
 
 def main():
+    base_dir: str = os.path.dirname(__file__)
+    em_processed_data_path: str = os.path.join(base_dir, '../../../data/processed/')
+
     time, potential_energy = numpy.loadtxt(
-        '../../potential.xvg'
+        os.path.join(em_processed_data_path, 'potential.xvg')
     ).T
 
     # Multiply time by emstep to get time in picoseconds

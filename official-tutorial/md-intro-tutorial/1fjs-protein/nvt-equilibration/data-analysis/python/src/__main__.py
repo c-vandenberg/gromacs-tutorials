@@ -13,8 +13,11 @@ from modules.line_graph import LineGraph
 
 
 def main():
+    base_dir: str = os.path.dirname(__file__)
+    nvt_equilibration_processed_data_path: str = os.path.join(base_dir, '../../../data/processed/')
+
     time, temperature = numpy.loadtxt(
-        '../../temperature.xvg'
+        os.path.join(nvt_equilibration_processed_data_path, 'temperature.xvg')
     ).T
 
     # Subtracts the first element from every element in the time array, ensuring the first element is 0/the time starts

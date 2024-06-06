@@ -13,8 +13,11 @@ from modules.line_graph import LineGraph
 
 
 def main():
+    base_dir: str = os.path.dirname(__file__)
+    npt_equilibration_processed_data_path: str = os.path.join(base_dir, '../../../data/processed/')
+
     time, pressure = numpy.loadtxt(
-        '../../pressure.xvg'
+        os.path.join(npt_equilibration_processed_data_path, 'pressure.xvg')
     ).T
 
     # Combine time and potential energy
@@ -41,7 +44,7 @@ def main():
     )
 
     _, density = numpy.loadtxt(
-        '../../density.xvg'
+        os.path.join(npt_equilibration_processed_data_path, 'density.xvg')
     ).T
 
     # Combine time and potential energy
