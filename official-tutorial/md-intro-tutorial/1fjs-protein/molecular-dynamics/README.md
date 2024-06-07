@@ -10,7 +10,7 @@ A molecular dynamics (MD) simulation predicts the motion of atoms/molecules at a
 
 At the heart of MD simulations are **Newton's equations of motions**, which describe how the positions & velocities of particles evolve over time. MD simulations make use of **integration algorithms** such as the **Velocity Verlet algorithm** to integrate and solve Newton's equations of motion.
 
-The general steps of the Velocity Verlet algorithm are:
+The general steps of the Velocity Verlet algorithm **<sup>1</sup>** are:
 1. **Initial Position & Velocity**
     * Each particle/atom in the molecule is given an initial position & velocity
     * Using a force field (e.g. CHARMM 27), the forces acting on each atom at this initial position are calculated (sum of the bonding & non-bonding interactions)
@@ -181,3 +181,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 1. Once we have run the simulation, it is good practice to report what type of simulation we have performed, as well as the basic system information
 2. This can be achieved with the `gmx report-methods` GROMACS tool:
 	* `gmx report-methods -s md.tpr`
+
+
+ ## References
+**[1]** Jensen, F. (2017) ‘15. 2 Time-Dependent Methods’, in *Introduction to Computational Chemistry*. 3rd edn. Newark: John Wiley & Sons, Incorporated, pp. 474–478. 
