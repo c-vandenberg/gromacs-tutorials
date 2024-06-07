@@ -30,7 +30,7 @@ The general steps of the Velocity Verlet algorithm are:
     * ![timestep](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CDelta%20t) is the timestep
     * ![acceleration](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Ba%7D%28t%29%20%3D%20%5Cfrac%7B%5Cmathbf%7BF%7D%28t%29%7D%7Bm%7D) is the acceleration at time ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t), ![force_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%29) is the force acting on the particle/atom at time ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t) and ![mass](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20m) is the mass of the particle
 
-<br>
+      <br>
 
 3. **Velocity Update (Half-step)**
     * The Velocity Verlet algorithm calculates the velocities of each particle/atom in the molecule at the half-time step:
@@ -46,17 +46,20 @@ The general steps of the Velocity Verlet algorithm are:
     * ![current_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%28t%29) is the velocity at time *t*
     * ![half_step_vacceleration](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Ba%7D%28t%29%20%3D%20%5Cfrac%7B%5Cmathbf%7BF%7D%28t%29%7D%7Bm%7D) is the acceleration at time ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t), ![force_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%29) is the force acting on the particle/atom at time ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t) and ![mass](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20m) is the mass of the particle
 
-    <br>
+      <br>
 
 4. **Force Calculation**
-   * The Velocity Verlet algorithm then calculates the forces **F** *(t+Δt)*: at the new position *r(t+Δt)*:
+   * The Velocity Verlet algorithm then calculates the forces ![force_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29) at the new position ![position_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29):
 
-    <br>
-    <div align="center">
-      <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20-%5Cfrac%7B%5Cpartial%20U%28%5Cmathbf%7Br%7D%29%7D%7B%5Cpartial%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%7D", alt="velocity-verlet-algorithm-half-step-force-calculation-equation"/>
-    </div>
+      <br>
+      <div align="center">
+         <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20-%5Cfrac%7B%5Cpartial%20U%28%5Cmathbf%7Br%7D%29%7D%7B%5Cpartial%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%7D", alt="velocity-verlet-algorithm-half-step-force-calculation-equation"/>
+      </div>
 
     where:
     * ![force_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29) is the force at time ![current_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bt%7D%28t%20%2B%20%5CDelta%20t%29)
     * ![negative_pot_energy_gradient](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20-%5Cfrac%7B%5Cpartial%20U%28%5Cmathbf%7Br%7D%29%7D%7B%5Cpartial%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%7D) is the negative gradiant of the potential energy ![pot_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20U%28%5Cmathbf%7Br%7D%29) with respect to the position ![position](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D) at ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t). The gradient is calculated by taking the first-order partial derivative with respect to the position ![position_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29)
+   
+      <br>
 
+5. **Velocity Update (Full-step)**
