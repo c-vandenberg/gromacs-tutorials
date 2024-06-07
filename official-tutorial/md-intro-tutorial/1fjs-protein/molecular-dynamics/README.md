@@ -1,6 +1,6 @@
 # 5 Molecular Dynamics Simulation
 
-https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/fa34ed41-8ca1-4fb6-90cd-55111bdfbe44
+https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/9087889e-b755-4d28-a41c-f549cb495a27
 
 ## 5.1 Introduction
 
