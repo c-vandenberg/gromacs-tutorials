@@ -6,7 +6,7 @@ We have now defined the protein topology, solvent topology and simulation box of
 
 However, before we can begin molecular dynamics, we must ensure that the system has no steric clashes or inappropriate geometry. This is achieved via energy minimization. The energy minimization algorithm we will use is 'steepest descent', which is one of the simplest energy minimization algorithms.
 
-**Energy Minimization by steepest descent works** as follows <sup>1</sup>:
+**Energy Minimization by steepest descent works** as follows **<sup>1</sup>**:
 1. **Initialization** 
     * **Input System Configuration**: Start with initial system configuration/topology
     * **Potential Energy Calculation**: Calculate the initial potential energy, *U* of the system using a defined force field. In our case it is the CHARMM27 all-atom force field
