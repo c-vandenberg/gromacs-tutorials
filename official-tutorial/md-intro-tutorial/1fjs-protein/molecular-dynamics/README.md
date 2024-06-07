@@ -102,3 +102,61 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
    * ![atom_summation](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Csum_%7Bi%3D1%7D%5EN) is the summation of all atoms/particles in the system
    * ![atom_mass](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20m_i) is the mass of atom *i*
    * ![atom_velocity_squared](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20v_i%5E2%28t%29) is the squared velocity of of atom *i* at time *t*
+
+## Simulation Commands
+
+### Molecular Dynamics (MD) Simulation
+1. The MD simulation parameter file (`md-charmm.mdp`) uses velocity-rescaling temperature coupling as the thermostat and stochastic cell rescaling as the barostat. It also specifies a 1 ns MD simulation
+2. Navigate to `1fjs-protein/data/input/topology/protein` and run:
+    * `gmx grompp -f ../../../../molecular-dynamics/data/input/md-charmm.mdp -c ../../../../npt-equilibration/data/processed/npt.gro -t ../../../../npt-equilibration/data/processed/npt.cpt -p topol.top -o md.tpr`
+    * `mv md.tpr ../../../../molecular-dynamics/data/processed`
+    * `mv mdout.mdp ../../../../molecular-dynamics/data/processed`
+3. Navigate to `1fjs-protein/molecular-dynamics/data/processed`
+    * `gmx mdrun -ntmpi 1 -v -deffnm md`
+
+### Molecular Dynamics (MD) Simulation Post-Processing and VMD Processing
+1. For post-processing MD simulation analysis, the first GROMACS tool we will use is `gmx trjconv` which is used to manipulate trajectory files e.g. strip out coordinates, correct for periodicity (i.e. fix any parts of the protein that have extended beyond a simulation box with PBC on one side, and re-entered on the opposite side) or manually alter the trajectory (time units, frame frequency etc.)
+2. The GROMACS documentation has a [suggested workflow](https://manual.gromacs.org/2021/user-guide/terminology.html?highlight=periodic%20boundary) for `gmx trjconv` to fix periodicity effects
+3. We will pipe in the `1\n1\n"` string to select atom 'Group 1' ('Protein') to be centered and atom 'Group 1' ('Protein') to be output to the `center.xtc` file. If we omit this piping GROMACS will prompt us for centering and output groups
+4. We use the `-center` flag to center the chosen group of atoms and the `-pbc mol` flag corrects for periodic boundary conditions (PBC). The `mol` option means that whole molecules are kept together when correcting for PBC
+5. Navigate to `1fjs-protein/molecular-dynamics/data/processed` and run:
+   * `printf "1\n1\n" | gmx trjconv -s md.tpr -f md.xtc -o md_center.xtc -center -pbc mol`
+6. Consolidate files into VMD directory:
+	* `mkdir ../vmd && cp md_center.xtc ../vmd && cd../vmd`
+	* `cp ../../../protein/data/topology/simulation-parameters/1fjs_newbox.gro .`
+7. In directory `fjs-protein/molecular-dynamics/data/vmd` open MD simulation in VMD and modify graphical representation once open run:
+	* `vmd 1fjs_newbox.gro md_center.xtc`
+8. Render image via File > Renderer > Render the current scene using > Tachyon > Start Rendering
+9. Render MP4 via Extensions > Visualizations > Movie Maker then Renderer > Tachyon and Movie Settings > Trajectory (Un-tick 'Delete image files')
+10. Once `.ppm` files are generated, navigate to `md-intro-tutorial/scripts` and run:
+    * `./vmd_movie_processor.sh <vmd_directory_absolute_path>`
+
+### Molecular Dynamics (MD) Simulation Data Analysis
+**Protein-Periodic Boundary Minimum Distance**
+1. Another GROMACS MD simulation post-processing tool is `gmx mindist`. This calculates the minimum distance between a given group of atoms and its periodic image (i.e. the distance to the periodic boundary). Here we pipe in `1` for the 'Protein' group:
+	* `printf "1\n" | gmx mindist -s md.tpr -f md_center.xtc -pi -od mindist.xvg`
+2. The distance between the protein and its periodic image should not be smaller than the cut-off distance used to describe non-bonded interactions (in this case, 1.2 nm as per `md-charmm.mdp`)
+3. From the data analysis in Python & JupyterLabs we can see that the distance doesn't drop below 1.4 nm
+
+**Root Mean Square Deviation (RMSD)**
+1. The post-processing tool `gmx rms` calculates the root mean square deviation (RMSD) of a group of atoms from a reference structure over time
+2. RMSD is a measure of the average distance between the atoms of superimposed proteins (usually the backbone of atoms). It is commonly used to assess the similarity between protein structures or to monitor structural changes over time in MD simulations
+3. Here the reference structure is the backbone ('Group 4') of the energy minimized topology (`em.tpr`):
+    * `printf '4\n1\n' | gmx rms -s ../../../energy-minimization/data/processed/em.tpr -f md_center.xtc -o rmsd_xray.xvg -tu ns -xvg none`
+
+**Radius of Gyration (Rg)**
+1. The post-processing tool `gmx gyrate` calculates the radius of gyration (Rg) of a specified group of atoms over time
+2. The Rg of a protein is a measure of its compactness. If a protein is stably folded, it will likely maintain a relatively steady value of Rg. If a protein unfolds, its Rg will change over time
+3. Again we pipe in `1` for the 'Protein' group:
+	* `echo "1" | gmx gyrate -f md_center.xtc -s md.tpr -o gyrate.xvg -xvg none`
+
+**Index File**
+1. The post-processing tool `gmx make_ndx` is used to create and manipulate index groups. Index groups are sets of atoms that are used for various analyses and operations within GROMACS
+2. The string `splitch 1` that is piped in splits chain 1 into separate index groups based on criteria such as residues:
+	* `printf "splitch 1\nq\n" | gmx make_ndx -f md.tpr -o`
+3. We can now calculate the hydrogen bonds between the two protein chains using `gmx hbond`, with the `-num` flag specifying GROMACS to output the number of hydrogen bonds as a function of time
+	
+**Report Methods**
+1. Once we have run the simulation, it is good practice to report what type of simulation we have performed, as well as the basic system information
+2. This can be achieved with the `gmx report-methods` GROMACS tool:
+	* `gmx report-methods -s md.tpr`
