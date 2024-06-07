@@ -1,0 +1,47 @@
+;
+;	File 'protein/topol.top' was generated
+;	By user: chris-vdb (1000)
+;	On host: chris-B550-AORUS-ELITE-AX-V2
+;	At date: Tue Jun  4 13:43:04 2024
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	              :-) GROMACS - gmx pdb2gmx, 2023.3-conda_forge (-:
+;	
+;	Executable:   /home/chris-vdb/anaconda3/envs/md-intro-tutorial/bin.AVX2_256/gmx
+;	Data prefix:  /home/chris-vdb/anaconda3/envs/md-intro-tutorial
+;	Working dir:  /home/chris-vdb/Computational-Chemistry/gromacs-tutorials/official-tutorial/md-intro-tutorial/md-intro-tutorial-main/1fjs-protein/data/input/topology
+;	Command line:
+;	  gmx pdb2gmx -f protein/1fjs_protein.pdb -o 1fjs_processed.gro -p protein/topol.top -i position-restraints/porse.itp -water tip3p -ff charmm27
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "charmm27.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_L.itp"
+
+; Include water topology
+#include "charmm27.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "charmm27.ff/ions.itp"
+
+[ system ]
+; Name
+COAGULATION FACTOR XA; COAGULATION FACTOR XA
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_L     1
