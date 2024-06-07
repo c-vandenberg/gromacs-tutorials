@@ -14,28 +14,7 @@ The 3D structure of Factor Xa is available from the protein data bank (PDB), wit
 
 ## Simulation Commands
 
-### Equilibration Run - Pressure (NPT Ensemble Equilibration)
-1. The NVT ensemble equilibration stabilises the temperature of the system 
-2. Prior to the MD simulation, we must also stabilise the pressure (and thus the density) of the system
-3. Equilibration of pressure is conducted under an NPT ensemble. This ensemble is also called the 'isothermal-isobaric' ensemble, and most closely resembles experimental conditions
-4. The NPT equilibration simulation parameter file (`npt-charmm.mdp`) uses the Berendsen barostat to control pressure, and specifies a 100 ps NPT equilibration
-5. Navigate to `1fjs-protein/data/input/topology/protein`
-	`gmx grompp -f ../../../../npt-equilibration/data/input/npt-charmm.mdp -c ../../../../energy-minimization/data/processed/em.gro -r ../../../../energy-minimization/data/processed/em.gro -p topol.top -o npt.tpr`
-	`mv npt.tpr ../../../../npt-equilibration/data/processed`
-	`mv mdout.mdp ../../../../npt-equilibration/data/processed`
-6. Navigate to `1fjs-protein/nvt-equilibration/data/processed`
-	`gmx mdrun -ntmpi 1 -v -deffnm npt`
-
-### NPT Ensemble Equilibration Data Analysis
-1. Navigate to `1fjs-protein/nvt-equilibration/data-analysis`
-2. Extract pressure & time data
-	`echo "Pressure" | gmx energy -f ../data/processed/npt.edr -o pressure.xvg -xvg none`
-3. Extract density & time data
-	`echo "Density" | gmx energy -f ../data/processed/npt.edr -o density.xvg -xvg none`
-4. The average system density is close to the experimental value of 100 kg/m<sup>3</sup> and the expected density of the TIP3P model of 1001 kg/m<sup>3</sup>. The density values are also very stable over time, indicating that the system is now well-equilibrated with respect to pressure & density
-
 ### Molecular Dynamics (MD) Simulation
-1. After the two equilibration phases, the system is now well-equilibrated at the desired temperature (NVT equilibration) and pressure (NPT equilibration)
 2. We are now ready to release the position restraints and run the MD simulation
 3. The MD simulation parameter file (`md-charmm.mdp`) uses velocity-rescaling temperature coupling as the thermostat and stochastic cell rescaling as the barostat. It also specifies a 1 ns MD simulation
 4. Navigate to `1fjs-protein/data/input/topology/protein`

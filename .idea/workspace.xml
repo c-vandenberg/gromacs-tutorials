@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="" />
+    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/molecular-dynamics/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,14 +35,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Python.1FJS Protein Energy MInimization.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.1FJS Protein Energy MInimization.executor&quot;: &quot;Run&quot;,
     &quot;Python.1FJS Protein MD SImulation.executor&quot;: &quot;Run&quot;,
     &quot;Python.1FJS Protein NPT Equilibration.executor&quot;: &quot;Run&quot;,
     &quot;Python.1FJS Protein NVT Equilibration.executor&quot;: &quot;Run&quot;,
     &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/molecular-dynamics-intro&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/chris-vdb/Computational-Chemistry/gromacs-tutorials/official-tutorial/md-intro-tutorial/notebooks/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/chris-vdb/Computational-Chemistry/gromacs-tutorials&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
@@ -58,7 +62,7 @@
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.1FJS Protein MD SImulation">
+  <component name="RunManager" selected="Python.1FJS Protein NPT Equilibration">
     <configuration name="1FJS Protein Energy MInimization" type="PythonConfigurationType" factoryName="Python">
       <module name="gromacs-tutorials" />
       <option name="ENV_FILES" value="" />
@@ -195,18 +199,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/npt-equilibration/data-analysis/python/src/__main__.py</url>
-          <line>45</line>
+          <line>41</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/1fjs-protein/molecular-dynamics/data-analysis/python/src/__main__.py</url>
-          <line>108</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/official-tutorial/md-intro-tutorial/python/src/modules/line_graph.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="14" />
+          <line>19</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
