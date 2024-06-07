@@ -142,6 +142,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 </div>
    
 3. From the data analysis in Python & JupyterLabs we can see that the distance doesn't drop below 1.4 nm
+<br>
 
 **Root Mean Square Deviation (RMSD)**
 1. The post-processing tool `gmx rms` calculates the root mean square deviation (RMSD) of a group of atoms from a reference structure over time
@@ -152,6 +153,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 <div align="center">
   <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/7dba8748-baf7-4932-af10-edc40eaf8827" alt="rmsd-vs-time" width="">
 </div>
+<br>
 
 **Radius of Gyration (Rg)**
 1. The post-processing tool `gmx gyrate` calculates the radius of gyration (Rg) of a specified group of atoms over time
@@ -162,6 +164,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 <div align="center">
   <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/e2c0a6ec-380a-489b-a8d4-6205220977c9" alt="radius-gyration-vs-time" width="">
 </div>
+<br>
 
 **Index File**
 1. The post-processing tool `gmx make_ndx` is used to create and manipulate index groups. Index groups are sets of atoms that are used for various analyses and operations within GROMACS
@@ -172,6 +175,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 <div align="center">
   <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/7be8a026-3f86-43fb-815c-d28ef28e4cea" alt="chain-1-chain-2-h-bonds-vs-time" width="">
 </div>
+<br>
 	
 **Report Methods**
 1. Once we have run the simulation, it is good practice to report what type of simulation we have performed, as well as the basic system information
