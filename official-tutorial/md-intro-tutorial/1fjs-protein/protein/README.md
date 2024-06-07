@@ -1,5 +1,12 @@
 # 1 Generating Topologies, Defining Simulation Box & Solvating System
 
+
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/cd2d1faf-87e3-4078-acf9-683c3b465e66" alt="1fjs-protein-crystal-structure" width="">
+</div>
+
+**Fig 1** Coagulation Factor Xa Crystal Structure
+
 ## 1.1 Introduction
 
 Prior to any simulation run, we must define our system by:
