@@ -4,6 +4,8 @@
 
 ## 5.1 Introduction
 
+[1fjs-protein-md.mp4](reports%2Ffigures%2Fvmd-graphics%2F1fjs-protein-md.mp4)
+
 After the NVT & NPT equilibration runs, the system is now well-equilibrated at the desired temperature (NVT equilibration) and pressure/density (NPT equilibration). We are now ready to release the position restraints and run the production molecular dynamics simulation for data collection.
 
 A molecular dynamics (MD) simulation predicts the motion of atoms/molecules at a given temperature for a given simulation time length. 
