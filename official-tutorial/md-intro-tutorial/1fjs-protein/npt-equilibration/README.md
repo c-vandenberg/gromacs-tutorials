@@ -1,6 +1,6 @@
-# 4) NPT Ensemble Equilibration
+# 4 NPT Ensemble Equilibration
 
-## Introduction
+## 4.1 Introduction
 
 Using NVT equilibration we have stabilised the temperature of the system. However, prior to the MD simulation, we must also stabilise the pressure (and thus the density) of the system.
 
@@ -10,9 +10,9 @@ In the context of equilibration, NPT equilibration equilibrates the system at co
 
 NPT equilibration allows the system volume to adjust to achieve the target pressure, thus allowing the system to react a realistic, stable density before any MD production runs.
 
-## Simulation Commands
+## 4.2 Simulation Commands
 
-### 4.1) Equilibration Run - Pressure (NPT Ensemble Equilibration)
+### 4.2.1 Equilibration Run - Pressure (NPT Ensemble Equilibration)
 1. Equilibration of pressure is conducted under an NPT ensemble. This ensemble is also called the 'isothermal-isobaric' ensemble, and most closely resembles experimental conditions
 2. The NPT equilibration simulation parameter file (`npt-charmm.mdp`) uses the Berendsen barostat to control pressure, and specifies a 100 ps NPT equilibration
 3. Navigate to `1fjs-protein/data/input/topology/protein`
@@ -22,7 +22,7 @@ NPT equilibration allows the system volume to adjust to achieve the target press
 4. Navigate to `1fjs-protein/nvt-equilibration/data/processed`
     * `gmx mdrun -ntmpi 1 -v -deffnm npt`
 
-### 4.2) NPT Ensemble Equilibration Data Analysis
+### 4.2.2 NPT Ensemble Equilibration Data Analysis
 1. Navigate to `1fjs-protein/nvt-equilibration/data-analysis`
 2. Extract pressure & time data
 	* `echo "Pressure" | gmx energy -f ../data/processed/npt.edr -o pressure.xvg -xvg none`
