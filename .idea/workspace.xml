@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="" />
+    <list default="true" id="7255fc9c-0988-4c7d-a381-e104d8d013ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,19 +32,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.1FJS Protein Energy MInimization.executor&quot;: &quot;Run&quot;,
-    &quot;Python.1FJS Protein MD SImulation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.1FJS Protein NPT Equilibration.executor&quot;: &quot;Run&quot;,
-    &quot;Python.1FJS Protein NVT Equilibration.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/molecular-dynamics-intro&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/chris-vdb/Computational-Chemistry/gromacs-tutorials&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1FJS Protein Energy MInimization.executor": "Run",
+    "Python.1FJS Protein MD SImulation.executor": "Run",
+    "Python.1FJS Protein NPT Equilibration.executor": "Run",
+    "Python.1FJS Protein NVT Equilibration.executor": "Run",
+    "Python.__main__.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/chris-vdb/Computational-Chemistry/gromacs-tutorials",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/official-tutorial/md-intro-tutorial/notebooks/data" />
