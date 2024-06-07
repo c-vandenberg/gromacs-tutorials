@@ -6,7 +6,7 @@ We have now defined the protein topology, solvent topology and simulation box of
 
 However, before we can begin molecular dynamics, we must ensure that the system has no steric clashes or inappropriate geometry. This is achieved via energy minimization. The energy minimization algorithm we will use is 'steepest descent', which is one of the simplest energy minimization algorithms.
 
-**Energy Minimization by steepest descent works** as follows<sup>1</sup>:
+**Energy Minimization by steepest descent works** as follows <sup>1</sup>:
 1. **Initialization** 
     * **Input System Configuration**: Start with initial system configuration/topology
     * **Potential Energy Calculation**: Calculate the initial potential energy, *U* of the system using a defined force field. In our case it is the CHARMM27 all-atom force field
@@ -46,19 +46,23 @@ Therefore, steepest descent cannot climb out of the nearest local energy minimum
 ### Energy minimisation
 1. Before we can begin molecular dynamics, we must ensure that the solvated, electronically neutral system has no steric clashes or inappropriate geometry via energy minimization
 2. Navigate to `1fjs-protein/energy-minimization/data/processed`
-3. We again use `gmx grompp` to generate the atomic-level binary file (`em.tpr`) that GROMACS can use to run energy minimization
-	`gmx grompp -f  ../input/energy-minimization/emin-charmm.mdp -c ../input/topology/solvent/1fjs_solv_ions.gro -p ../input/topology/protein/topol.top -o em.tpr`
-4. The next GROMACS tool we use is `gmx mdrun` which is used for running simulations or computations from an atomic-level input binary file (`.tpr` file
+3. We again use `gmx grompp` to generate the atomic-level binary file (`em.tpr`) that GROMACS can use to run energy minimization:
+	* `gmx grompp -f  ../input/energy-minimization/emin-charmm.mdp -c ../input/topology/solvent/1fjs_solv_ions.gro -p ../input/topology/protein/topol.top -o em.tpr`
+4. The next GROMACS tool we use is `gmx mdrun` which is used for running simulations or computations from an atomic-level input binary file (`.tpr`) file
 5. We specify GROMACS to use verbose terminal output (`-v`), and we specify that the input and all output files have the base name `em` (`-deffnm em`)
-	gmx mdrun -v -deffnm em
+	* `gmx mdrun -v -deffnm em`
 6. To ensure the energy minimization run was successful, in the end output, the potential energy (`epot`) must be negative & on the order of 1e5, and the maximum force `Fmax` < `emtol` (defined in `emin-charmm.mdp`)
 
 ### Energy minimisation Data Analysis
 1. Navigate to `1fjs-protein/energy-minimization/data-analysis`
 2. The GROMACS tool `gmx energy` is used for extracting and analysing energy terms from an energy (`.edr`) file 
 3. Pipe in `Potential` string into `gmx energy` command. Again this isn't needed as GROMACS will prompt you for it if you run it without it
-4. Analyse potential energy & time data via Python & JupyterLab
-	`printf "Potential\n0\n" | gmx energy -f ../data/processed/em.edr -o potential.xvg -xvg none`
+4. Analyse potential energy & time data via Python & JupyterLab:
+	* `printf "Potential\n0\n" | gmx energy -f ../data/processed/em.edr -o potential.xvg -xvg none`
+
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/446530fd-7aac-4d4a-9087-8578fa5b4c78" alt="pot-energy-vs-time" width="">
+</div>
 
 ## References
 **[1]** Jensen, F. (2017) ‘13. 2 Optimizing General Functions: Finding Minima’, in *Introduction to Computational Chemistry*. 3rd edn. Newark: John Wiley & Sons, Incorporated, pp. 407–408. 
