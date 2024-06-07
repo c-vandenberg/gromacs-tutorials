@@ -1,5 +1,7 @@
 # 5 Molecular Dynamics Simulation
 
+https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/fa34ed41-8ca1-4fb6-90cd-55111bdfbe44
+
 ## 5.1 Introduction
 
 After the NVT & NPT equilibration runs, the system is now well-equilibrated at the desired temperature (NVT equilibration) and pressure/density (NPT equilibration). We are now ready to release the position restraints and run the production molecular dynamics simulation for data collection.
