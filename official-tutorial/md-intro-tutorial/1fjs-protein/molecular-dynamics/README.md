@@ -136,6 +136,11 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 1. Another GROMACS MD simulation post-processing tool is `gmx mindist`. This calculates the minimum distance between a given group of atoms and its periodic image (i.e. the distance to the periodic boundary). Here we pipe in `1` for the 'Protein' group:
 	* `printf "1\n" | gmx mindist -s md.tpr -f md_center.xtc -pi -od mindist.xvg`
 2. The distance between the protein and its periodic image should not be smaller than the cut-off distance used to describe non-bonded interactions (in this case, 1.2 nm as per `md-charmm.mdp`)
+
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/87b89839-7157-440b-aeb9-520224db3a2a" alt="" width="protein-periodic-boundary-distance-vs-time">
+</div>
+   
 3. From the data analysis in Python & JupyterLabs we can see that the distance doesn't drop below 1.4 nm
 
 **Root Mean Square Deviation (RMSD)**
@@ -143,6 +148,10 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 2. RMSD is a measure of the average distance between the atoms of superimposed proteins (usually the backbone of atoms). It is commonly used to assess the similarity between protein structures or to monitor structural changes over time in MD simulations
 3. Here the reference structure is the backbone ('Group 4') of the energy minimized topology (`em.tpr`):
     * `printf '4\n1\n' | gmx rms -s ../../../energy-minimization/data/processed/em.tpr -f md_center.xtc -o rmsd_xray.xvg -tu ns -xvg none`
+  
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/7dba8748-baf7-4932-af10-edc40eaf8827" alt="rmsd-vs-time" width="">
+</div>
 
 **Radius of Gyration (Rg)**
 1. The post-processing tool `gmx gyrate` calculates the radius of gyration (Rg) of a specified group of atoms over time
@@ -150,11 +159,19 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 3. Again we pipe in `1` for the 'Protein' group:
 	* `echo "1" | gmx gyrate -f md_center.xtc -s md.tpr -o gyrate.xvg -xvg none`
 
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/e2c0a6ec-380a-489b-a8d4-6205220977c9" alt="radius-gyration-vs-time" width="">
+</div>
+
 **Index File**
 1. The post-processing tool `gmx make_ndx` is used to create and manipulate index groups. Index groups are sets of atoms that are used for various analyses and operations within GROMACS
 2. The string `splitch 1` that is piped in splits chain 1 into separate index groups based on criteria such as residues:
 	* `printf "splitch 1\nq\n" | gmx make_ndx -f md.tpr -o`
 3. We can now calculate the hydrogen bonds between the two protein chains using `gmx hbond`, with the `-num` flag specifying GROMACS to output the number of hydrogen bonds as a function of time
+
+<div align="center">
+  <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/7be8a026-3f86-43fb-815c-d28ef28e4cea" alt="chain-1-chain-2-h-bonds-vs-time" width="">
+</div>
 	
 **Report Methods**
 1. Once we have run the simulation, it is good practice to report what type of simulation we have performed, as well as the basic system information
