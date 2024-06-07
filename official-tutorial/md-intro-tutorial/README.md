@@ -14,10 +14,10 @@ The 3D structure of Factor Xa is available from the protein data bank (PDB), wit
 
 This order in which the simulation system was build, minimised, equilibrated and the MD simulation run with regards to the directories is as follows:
 1. Generating Topologies, Defining Simulation Box & Solvating System (`protein` directory)
-2. Energy Minimization (`energy-minimization` directory)
-3. NVT Ensemble Equilibration (`nvt-equilibration` directory)
-4. NPT Ensemble Equilibration (`npt-equilibration` directory)
-5. Molecular Dynamics Simulation (`molecular-dynamics` directory)
+2. Energy Minimization (`1fjs-protein/energy-minimization` directory)
+3. NVT Ensemble Equilibration (`1fjs-protein/nvt-equilibration` directory)
+4. NPT Ensemble Equilibration (`1fjs-protein/npt-equilibration` directory)
+5. Molecular Dynamics Simulation (`1fjs-protein/molecular-dynamics` directory)
 
 ## References
 [1] Camire, R.M. (2021) 'Blood coagulation factor X: Molecular biology, inherited disease, and engineered therapeutics', *Journal of Thrombosis and Thrombolysis*, 52(2), pp. 383–390.<br>
