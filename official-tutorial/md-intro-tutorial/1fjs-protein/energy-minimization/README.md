@@ -11,31 +11,46 @@ However, before we can begin molecular dynamics, we must ensure that the system 
     * **Input System Configuration**: Start with initial system configuration/topology
     * **Potential Energy Calculation**: Calculate the initial potential energy, *U* of the system using a defined force field. In our case it is the CHARMM27 all-atom force field
 2. **Calculate Forces**
-    * **Gradient Calculation**: Calculate the **gradient of the potential energy surface (PES)** with respect to the positions of the atoms in the current structure
-      * The gradient is calculated by taking the first-order partial derivative of the potential energy of each atom with respect to its coordinates
-      * Therefore, the gradient of the PES is a vector of these first-order partial derivatives and represents the forces acting on each atom:
+    * **Gradient Calculation**: Calculate the **gradient of the potential energy surface (PES)** with respect to the positions of the atoms in the current structure. The gradient points towards the direction of **most increasing energy**
+      * The gradient is calculated by taking the first-order partial derivative of the potential energy, *U* of each atom with respect to its coordinates
+      * Therefore, the gradient of the PES is a vector of these first-order partial derivatives and represents the forces acting on each atom
 
-<br>
-<div align="center">
-  <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cnabla_%7B%5Cmathbf%7Br%7D_i%7D%20E%28%5Cmathbf%7Br%7D%29%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20x_i%7D%2C%20%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20y_i%7D%2C%20%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20z_i%7D%20%5Cright%29", alt='potential-energy-first-order-partial-derivative'/>
-</div>
-<br>
+	<br>
+	<div align="center">
+		<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cnabla_%7B%5Cmathbf%7B%7D%7D%20U%28%5Cmathbf%7Br_i%7D%29%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20x_i%7D%2C%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20y_i%7D%2C%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20z_i%7D%20%5Cright%29", alt='potential-energy-first-order-partial-derivative'/>
+	</div>
+	<br>
+
+	where:
+	* *i* is the current iteration
 
 3. **Atom Displacement**
-    * **Step Size Determination**: Step size is chosen to determine how far each atom will move in a single iteration
-    * **Update Positions**: Make random change in geometric coordinates of each atom in the molecule and repeat 2 until we get a negative gradient
-4. **Recalculate Potential Energy**
+    * **Displacement Size Determination**: A displacement size scalar value, ![displacement_size](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cgamma) is chosen to determine how far each atom will move in the direction of **most decreasing energy (the negative gradient)** in a single iteration
+    * **Update Positions**: Update geometric coordinates of each atom in the molecule to get new positions, *r<sub>i + 1</sub>*
+
+  	<br>
+	<div align="center">
+		<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20r_%7Bi%2B1%7D%20%3D%20r_i%20-%20%5Cgamma_i%20%5Cnabla%20U%28r_i%29", alt="atom-displacement">
+	</div>
+	<br>
+
+  	where:
+   	* *r<sub>i + 1</sub>* are the new x, y and z geometric coordinates
+   	* *r<sub>i</sub> are the old x, y and z geometric coordinates
+   	* ![negative_gradient_displacement](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20-%20%5Cgamma_i%20%5Cnabla%20U%28r_i%29) is negative gradient, multiplied by our displacement size scalar value. This represents how far we are displacing the atoms in the direction of most decreasing energy
+
+5. **Recalculate Potential Energy**
     * **Potential Energy Calculation**: Calculate the new potential energy, *U* of the system using a defined force field
-5. **Convergence Check**
+6. **Convergence Check**
     * For each of the convergence checks, the predfined threshold will be 0 with a certain decimal place tolerance
     	* **Energy Difference Check**: Calculate the change in system potential energy, *U* between the current and previous iteration. If it is below the predefined threshold, this indicates that the system has reached a local energy mimimum
     	* **Magnitude of Gradient Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
     	* **Atom Displacement Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
     * If all three of these convergence criteria are met, continue to step 8 and output final molecular structure
-6. **Iteration Limit Check**: If number of iterations has reached the predefined limit, continue to step 8 and output final molecular structure
-7. **Repeat**
+7. **Iteration Limit Check**: If number of iterations has reached the predefined limit, continue to step 8 and output final molecular structure
+8. **Repeat**
     * **Iterative Process**: Else, repeat steps 2 to 6 until the convergence criteria are met, or the number of iterations has reached the predefined limit
-8. **Output**
+9. **Output**
     * **Final Molecular Structure & Minimized Energy**: Once convergence criteria is met, the final positions of the atoms represent a configuration with minimized potential energy
 
 Steepest descent is a very fast approach to energy minimization and can be used to treat very large systems of millions of atoms. 
