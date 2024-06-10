@@ -58,7 +58,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 		</div>
 		<br>
   
-		* **Atom Displacement Magnitude Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+		* **Atom Displacement Magnitude Check**: Evaluate the magnitude of atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
 
 		<br>
 		<div align="center">
