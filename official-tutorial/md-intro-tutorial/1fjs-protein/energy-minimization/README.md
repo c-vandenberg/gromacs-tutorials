@@ -67,7 +67,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 		<br>
   
     * If all three of these convergence criteria are met, continue to step 8 and output final molecular structure
-7. **Iteration Limit Check**: If number of iterations has reached the predefined limit, continue to step 8 and output final molecular structure
+7. **Iteration Limit Check**: If number of iterations has reached a predefined limit, continue to step 8 and output final molecular structure
 8. **Repeat**
     * **Iterative Process**: Else, repeat steps 2 to 6 until the convergence criteria are met, or the number of iterations has reached the predefined limit
 9. **Output**
