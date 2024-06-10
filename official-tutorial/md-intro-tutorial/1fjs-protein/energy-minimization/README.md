@@ -36,7 +36,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 
   	where:
    	* *r<sub>i + 1</sub>* are the new x, y and z geometric coordinates
-   	* *r<sub>i</sub> are the old x, y and z geometric coordinates
+   	* *r<sub>i</sub>* are the old x, y and z geometric coordinates
    	* ![negative_gradient_displacement](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20-%20%5Cgamma_i%20%5Cnabla%20U%28r_i%29) is negative gradient, multiplied by our displacement size scalar value. This represents how far we are displacing the atoms in the direction of most decreasing energy
 
 5. **Recalculate Potential Energy**
