@@ -2,7 +2,7 @@
 
 ## 2.1 Introduction
 
-We have now defined the protein topology, solvent topology and simulation box of our system. We have also ensured our solvated system is electronically neutral system. 
+We have now defined the protein topology, solvent topology and simulation box of our system. We have also ensured our solvated system is electronically neutral. 
 
 However, before we can begin molecular dynamics, we must ensure that the system has no steric clashes or inappropriate geometry. This is achieved via energy minimization. The energy minimization algorithm we will use is 'steepest descent', which is one of the simplest energy minimization algorithms.
 
