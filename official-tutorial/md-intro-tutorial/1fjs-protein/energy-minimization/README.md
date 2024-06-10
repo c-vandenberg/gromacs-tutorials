@@ -71,7 +71,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 8. **Repeat**
     * **Iterative Process**: Else, repeat steps 2 to 6 until the convergence criteria are met, or the number of iterations has reached the predefined limit
 9. **Output**
-    * **Final Molecular Structure & Minimized Energy**: Once convergence criteria is met, the final positions of the atoms represent a configuration with minimized potential energy
+    * **Final Molecular Structure & Minimized Energy**: Once convergence criteria is met or iteration limit is reached, the final positions of the atoms represent a configuration with minimized potential energy
 
 Steepest descent is a very fast approach to energy minimization and can be used to treat very large systems of millions of atoms. 
 
