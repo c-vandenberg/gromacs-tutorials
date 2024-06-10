@@ -50,7 +50,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 		</div>
 		<br>
   
-    	* **Magnitude of Gradient Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+    	* **Gradient Magnitude Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
 
 		<br>
 		<div align="center">
@@ -58,7 +58,7 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 		</div>
 		<br>
   
-		* **Atom Displacement Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+		* **Atom Displacement Magnitude Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
 
 		<br>
 		<div align="center">
