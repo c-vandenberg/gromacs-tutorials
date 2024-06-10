@@ -21,18 +21,21 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 </div>
 <br>
 
-3. **Move Atoms**
+3. **Atom Displacement**
     * **Step Size Determination**: Step size is chosen to determine how far each atom will move in a single iteration
     * **Update Positions**: Make random change in geometric coordinates of each atom in the molecule and repeat 2 until we get a negative gradient
 4. **Recalculate Potential Energy**
     * **Potential Energy Calculation**: Calculate the new potential energy, *U* of the system using a defined force field
 5. **Convergence Check**
-    * **Energy Difference Check**: Calculate the change in system potential energy, *U* between the current and previous iteration
-    * **Magnitude of Gradient Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold (usually 0 with a certain decimal place tolerance), this indicates that the system has reached a local energy minimum
-    * **Iteration Limit Check**: Ensure that the number of iterations has not exceeded the predefined limit
-6. **Repeat**
-    * **Iterative Process**: Repeat steps 2 to 5 until the one of the convergence criteria is met
-7. **Output**
+    * For each of the convergence checks, the predfined threshold will be 0 with a certain decimal place tolerance
+    	* **Energy Difference Check**: Calculate the change in system potential energy, *U* between the current and previous iteration. If it is below the predefined threshold, this indicates that the system has reached a local energy mimimum
+    	* **Magnitude of Gradient Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+    	* **Atom Displacement Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+    * If all three of these convergence criteria are met, continue to step 8 and output final molecular structure
+6. **Iteration Limit Check**: If number of iterations has reached the predefined limit, continue to step 8 and output final molecular structure
+7. **Repeat**
+    * **Iterative Process**: Else, repeat steps 2 to 6 until the convergence criteria are met, or the number of iterations has reached the predefined limit
+8. **Output**
     * **Final Molecular Structure & Minimized Energy**: Once convergence criteria is met, the final positions of the atoms represent a configuration with minimized potential energy
 
 Steepest descent is a very fast approach to energy minimization and can be used to treat very large systems of millions of atoms. 
