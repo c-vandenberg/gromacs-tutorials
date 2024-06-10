@@ -44,8 +44,28 @@ However, before we can begin molecular dynamics, we must ensure that the system 
 6. **Convergence Check**
     * For each of the convergence checks, the predfined threshold will be 0 with a certain decimal place tolerance
     	* **Energy Difference Check**: Calculate the change in system potential energy, *U* between the current and previous iteration. If it is below the predefined threshold, this indicates that the system has reached a local energy mimimum
+		<br>
+		<div align="center">
+			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7CU%28r_i%29%20-%20U%28r_%7Bi%2B1%7D%29%7C%20%5Capprox%200", alt="pot-energy-convergence-check">
+		</div>
+		<br>
+  
     	* **Magnitude of Gradient Check**: Evaluate the magnitude of the current PES gradient. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
-    	* **Atom Displacement Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+
+		<br>
+		<div align="center">
+			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7C%7C%5Cnabla%20U%28r_i%29%7C%7C%20%5Capprox%200", alt="gradient-convergence-check">
+		</div>
+		<br>
+  
+		* **Atom Displacement Check**: Evaluate the magnitude of the atom displacement between the current iteration and the previous iteration. If it is below a predefined threshold, this indicates that the system has reached a local energy minimum
+
+		<br>
+		<div align="center">
+			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7C%7C%20r_i%20-%20r_%7Bi%2B1%7D%20%7C%7C%20%5Capprox%200", alt="atom-displacement-convergence-check">
+		</div>
+		<br>
+  
     * If all three of these convergence criteria are met, continue to step 8 and output final molecular structure
 7. **Iteration Limit Check**: If number of iterations has reached the predefined limit, continue to step 8 and output final molecular structure
 8. **Repeat**
