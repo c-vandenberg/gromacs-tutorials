@@ -76,7 +76,9 @@ class LineGraph:
                           figure_text_x_coord: Union[int, float], figure_text_y_coord: Union[int, float],
                           font_size: Union[int, float], tick_label_size: Union[int, float],
                           line_width: Union[int, float], save_path: Union[str, None] = None,
-                          line_labels: Union[List, None] = None):
+                          line_labels: Union[List, None] = None,
+                          line_labels_position: Union[str, None] = None,
+                          dashed_lines: Union[List[Tuple[str, Union[int, float]]], None] = None):
         """
         Create a single line graph with single or multiple lines.
 
@@ -116,6 +118,10 @@ class LineGraph:
             Directory path where the plot will be saved (optional).
         line_labels : Union[List, None]
             List of labels for each line (optional).
+        line_labels_position : str
+            Position for the line labels (optional).
+        dashed_lines : List[Tuple[str, Union[int, float]]]
+            Dashed lines for the x-axis and/or y-axis (optional)
 
         Returns
         -------
@@ -148,10 +154,22 @@ class LineGraph:
         line_graph_axes.set_xlim(x_lim)
         line_graph_axes.set_title(graph_title, fontsize=font_size, color='white')
 
+        if dashed_lines:
+            for axis, coord in dashed_lines:
+                if axis.lower() not in ['x', 'y']:
+                    raise ValueError('Dashed line axis must be "x" or "y"')
+
+                if axis.lower() == 'x':
+                    line_graph_axes.axvline(coord, color='white', linestyle='--', linewidth=1.5)
+                else:
+                    line_graph_axes.axhline(coord, color='white', linestyle='--', linewidth=1.5)
+
         if line_labels:
+            label_position = line_labels_position if line_labels_position is not None else 'upper right'
+
             # Add legend
-            legend: Legend = line_graph_axes.legend(loc='center left', bbox_to_anchor=(1, 0.5), frameon=False,
-                                                    fontsize=font_size)
+            legend: Legend = line_graph_axes.legend(loc=label_position, frameon=False, fontsize=font_size)
+
             for text in legend.get_texts():
                 text.set_color('white')
 
