@@ -6,9 +6,9 @@ The project involves setting up the topology, energy minimization, NVT & NPT equ
 
 ## Introduction
 
-Coagulation Factor X is a serine protease that sits at a pivotal point in the coagulation cascade. It has a role in the three major pathways of the cascade; the intrinsic, extrinsic and common pathways.<sup>1</sup> 
+Coagulation Factor X is a serine protease that sits at a pivotal point in the coagulation cascade. It has a role in the three major pathways of the cascade; the intrinsic, extrinsic and common pathways.**<sup>1</sup>**
 
-Factor X is a proenzyme and is activated into Factor Xa by hydrolysis, which can occur via the extrinsic or intrinsic pathways<sup>1</sup>.
+Factor X is a proenzyme and is activated into Factor Xa by hydrolysis, which can occur via the extrinsic or intrinsic pathways **<sup>1</sup>**.
 
 The 3D structure of Factor Xa is available from the protein data bank (PDB), with the PDB code **1FJS**. The [crystal structure](https://www.rcsb.org/3d-view/1FJS/1) can be downloaded as a PDB file.
 
