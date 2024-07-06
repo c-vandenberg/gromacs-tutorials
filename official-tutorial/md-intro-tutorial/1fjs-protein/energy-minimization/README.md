@@ -14,56 +14,45 @@ However, before we can begin molecular dynamics, we must ensure that the system 
     * **Gradient Calculation**: Calculate the **gradient of the potential energy surface (PES)** with respect to the positions of the atoms in the current structure. The gradient points towards the direction of **most increasing energy**
       * The gradient is calculated by taking the first-order partial derivative of the potential energy, *U* of each atom with respect to its coordinates
       * Therefore, the gradient of the PES is a vector of these first-order partial derivatives and represents the forces acting on each atom
+	<br>
 
-	<br>
-	<div align="center">
-		<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cnabla_%7B%5Cmathbf%7B%7D%7D%20U%28%5Cmathbf%7Br_i%7D%29%20%3D%20%5Cleft%28%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20x_i%7D%2C%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20y_i%7D%2C%20%5Cfrac%7B%5Cpartial%20U%7D%7B%5Cpartial%20z_i%7D%20%5Cright%29", alt='potential-energy-first-order-partial-derivative'/>
-	</div>
-	<br>
+ 	$$\nabla_{\mathbf{}} U(\mathbf{r_i}) = \left( \frac{\partial U}{\partial x_i}, \frac{\partial U}{\partial y_i}, \frac{\partial U}{\partial z_i} \right)$$
 
 	where:
-	* *i* is the current iteration
+	* $`i`$ is the current iteration
 
 3. **Atom Displacement**
-    * **Displacement Size Determination**: A displacement size scalar value, ![displacement_size](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cgamma) is chosen to determine how far each atom will move in the direction of **most decreasing energy (the negative gradient)** in a single iteration
-    * **Update Positions**: Update geometric coordinates of each atom in the molecule to get new positions, *r<sub>i + 1</sub>*
-
-  	<br>
-	<div align="center">
-		<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20r_%7Bi%2B1%7D%20%3D%20r_i%20-%20%5Cgamma_i%20%5Cnabla%20U%28r_i%29", alt="atom-displacement">
-	</div>
+    * **Displacement Size Determination**: A displacement size scalar value, $`\gamma`$ is chosen to determine how far each atom will move in the direction of **most decreasing energy (the negative gradient)** in a single iteration
+    * **Update Positions**: Update geometric coordinates of each atom in the molecule to get new positions, $`r_{i + 1}`$
+      
 	<br>
+ 	$$r_{i+1} = r_i - \gamma_i \nabla U(r_i)$$
 
   	where:
-   	* *r<sub>i + 1</sub>* are the new x, y and z geometric coordinates
-   	* *r<sub>i</sub>* are the old x, y and z geometric coordinates
-   	* ![negative_gradient_displacement](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20-%20%5Cgamma_i%20%5Cnabla%20U%28r_i%29) is negative gradient, multiplied by our displacement size scalar value. This represents how far we are displacing the atoms in the direction of most decreasing energy
+   	* $`r_{i + 1}`$ are the new x, y and z geometric coordinates
+   	* $`r_{i}`$ are the old x, y and z geometric coordinates
+   	* $`- \gamma_i \nabla U(r_i)`$ is negative gradient, multiplied by our displacement size scalar value. This represents how far we are displacing the atoms in the direction of most decreasing energy
 
 5. **Recalculate Potential Energy**
     * **Potential Energy Calculation**: Calculate the new potential energy, *U* of the system using a defined force field
 6. **Convergence Check**
     * For each of the convergence checks, the predfined threshold will be 0 with a certain decimal place tolerance
     	* **Energy Difference Check**: Calculate the change in system potential energy, *U* between the current and previous iteration. If it is below the predefined threshold, this indicates that the system has reached a local energy mimimum
+       
 		<br>
-		<div align="center">
-			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7CU%28r_i%29%20-%20U%28r_%7Bi%2B1%7D%29%7C%20%5Capprox%200", alt="pot-energy-convergence-check">
-		</div>
+		$$|U(r_i) - U(r_{i+1})| \approx 0$$
 		<br>
   
     	* **Gradient Magnitude Check**: Evaluate the magnitude of the current PES gradient at position *r*. If it is below the predefined threshold, this indicates that the system has reached a local energy minimum
-
+       
 		<br>
-		<div align="center">
-			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7C%7C%5Cnabla%20U%28r_i%29%7C%7C%20%5Capprox%200", alt="gradient-convergence-check">
-		</div>
+		$$||\nabla U(r_i)|| \approx 0$$
 		<br>
   
 		* **Atom Displacement Magnitude Check**: Evaluate the magnitude of atom displacement between the current iteration and the previous iteration. If it is below the predefined threshold, this indicates that the system has reached a local energy minimum
 
 		<br>
-		<div align="center">
-			<img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CLARGE%20%7C%7C%20r_i%20-%20r_%7Bi%2B1%7D%20%7C%7C%20%5Capprox%200", alt="atom-displacement-convergence-check">
-		</div>
+  		$|| r_i - r_{i+1} || \approx 0$
 		<br>
   
     * If all three of these convergence criteria are met, continue to step 8 and output final molecular structure
