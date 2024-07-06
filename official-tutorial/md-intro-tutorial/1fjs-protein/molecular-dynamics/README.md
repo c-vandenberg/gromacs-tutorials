@@ -93,7 +93,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 
    where:
    * $`KE_{E}(t)`$ is the total kinetic energy of all particles/atoms in the system at time $`t`$
-   * $`\sum_{i=1}^N`$ is the summation of all atoms/particles in the system
+   * $`\sum_{i=1}^{N}`$ is the summation of all atoms/particles in the system
    * $`m_i`$ is the mass of atom $`i`$
    * $`v_i^2(t)`$ is the squared velocity of of atom $`i`$ at time $`t`$
 
