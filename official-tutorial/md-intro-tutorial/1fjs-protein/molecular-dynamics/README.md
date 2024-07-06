@@ -21,16 +21,14 @@ The general steps of the Velocity Verlet algorithm **<sup>1</sup>** are:
     * The Velocity Verlet algorithm updates the positions of each particle/atom in the molecule using the current positions, velocities & accelerations (accelerations are derived from the forces):
 
     <br>
-    <div align="center">
-      <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20%5Cmathbf%7Br%7D%28t%29%20%2B%20%5Cmathbf%7Bv%7D%28t%29%5CDelta%20t%20%2B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7Ba%7D%28t%29%20%5CDelta%20t%5E2", alt="velocity-verlet-algorithm-position-update-equation"/>
-    </div>
+    $$\mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2} \mathbf{a}(t) \Delta t^2$$
 
     where:
-    * ![new_position](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29) is the new position at time ![new_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t)
-    * ![current_position](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%29) is the current position at time *t*
-    * ![current_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%28t%29) is the velocity at time *t*
-    * ![timestep](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5CDelta%20t) is the timestep
-    * ![acceleration](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Ba%7D%28t%29%20%3D%20%5Cfrac%7B%5Cmathbf%7BF%7D%28t%29%7D%7Bm%7D) is the acceleration at time *t*, ![force_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%29) is the force acting on the particle/atom at time *t*, and *m* is the mass of the particle/atom
+    * $`\mathbf{r}(t + \Delta t)`$ is the new position at time $`t + \Delta t`$
+    * $`\mathbf{r}(t)`$ is the current position at time *t*
+    * $`\mathbf{v}(t)`$ is the velocity at time *t*
+    * $`\Delta t`$ is the timestep
+    * $`\mathbf{a}(t) = \frac{\mathbf{F}(t)}{m}`$ is the acceleration at time $`t`$, $`\mathbf{F}(t)`$ is the force acting on the particle/atom at time $`t`$, and $`m`$ is the mass of the particle/atom
 
       <br>
 
@@ -39,29 +37,24 @@ The general steps of the Velocity Verlet algorithm **<sup>1</sup>** are:
     * The half-step velocity update is performed after the positions are updated but before the new forces (and hence new accelerations) are calculated. It uses the current accelerations to calculate & update the velocities of each particle/atom
 
     <br>
-    <div align="center">
-      <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%5Cleft%28t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D%5Cright%29%20%3D%20%5Cmathbf%7Bv%7D%28t%29%20%2B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7Ba%7D%28t%29%20%5CDelta%20t", alt="velocity-verlet-algorithm-half-step-velocity-equation"/>
-    </div>
-
+    $$\mathbf{v}\left(t + \frac{\Delta t}{2}\right) = \mathbf{v}(t) + \frac{1}{2} \mathbf{a}(t) \Delta t$$
 
     where:
-    * ![half_step_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%5Cleft%28t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D%5Cright%29) is the velocity at the half-step ![half_step_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D)
-    * ![current_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%28t%29) is the velocity at time *t*
-    * ![half_step_vacceleration](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Ba%7D%28t%29%20%3D%20%5Cfrac%7B%5Cmathbf%7BF%7D%28t%29%7D%7Bm%7D) is the acceleration at time *t*, where ![force_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%29) is the force acting on the particle/atom at time *t*, and *m* is the mass of the particle/atom
+    * $`\mathbf{v}\left(t + \frac{\Delta t}{2}\right)`$ is the velocity at the half-step $`t + \frac{\Delta t}{2}`$
+    * $`\mathbf{v}(t)`$ is the velocity at time $`t`$
+    * $`\mathbf{a}(t) = \frac{\mathbf{F}(t)}{m}`$ is the acceleration at time $`t`$, where $`\mathbf{F}(t)`$ is the force acting on the particle/atom at time $`t`$, and $`m`$ is the mass of the particle/atom
 
       <br>
 
 4. **Force Calculation**
-   * The Velocity Verlet algorithm then calculates the forces ![force_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29) at the new position ![position_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29):
-
-      <br>
-      <div align="center">
-         <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20-%5Cfrac%7B%5Cpartial%20U%28%5Cmathbf%7Br%7D%29%7D%7B%5Cpartial%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%7D", alt="velocity-verlet-algorithm-force-equation"/>
-      </div>
+   * The Velocity Verlet algorithm then calculates the forces $`\mathbf{F}(t + \Delta t)`$ at the new position $`\mathbf{r}(t + \Delta t)`$:
+	<br>
+	<br>
+ 	$$\mathbf{F}(t + \Delta t) = -\frac{\partial U(\mathbf{r})}{\partial \mathbf{r}(t + \Delta t)}$$
 
     where:
-    * ![force_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29) is the force at time ![current_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bt%7D%28t%20%2B%20%5CDelta%20t%29)
-    * ![negative_pot_energy_gradient](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20-%5Cfrac%7B%5Cpartial%20U%28%5Cmathbf%7Br%7D%29%7D%7B%5Cpartial%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29%7D) is the negative gradiant of the potential energy ![pot_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20U%28%5Cmathbf%7Br%7D%29) with respect to the position ![position](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D) at ![time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t). The gradient is calculated by taking the first-order partial derivative with respect to the position ![position_at_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Br%7D%28t%20%2B%20%5CDelta%20t%29)
+    * $`\mathbf{F}(t + \Delta t)`$ is the force at time $`\mathbf{t}(t + \Delta t)`$
+    * $`-\frac{\partial U(\mathbf{r})}{\partial \mathbf{r}(t + \Delta t)}`$ is the negative gradiant of the potential energy $`U(\mathbf{r})`$ with respect to the position $`\mathbf{r}`$ at $`t + \Delta t`$. The gradient is calculated by taking the first-order partial derivative with respect to the position $`\mathbf{r}(t + \Delta t)`$
    
       <br>
 
@@ -69,41 +62,40 @@ The general steps of the Velocity Verlet algorithm **<sup>1</sup>** are:
    * Finally, the Veloctiy Verlet algorithm updates the velocities to the full-time step using the new accelerations obtained from the calculations in step 4:
   
       <br>
-      <div align="center">
-         <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20%5Cmathbf%7Bv%7D%5Cleft%28t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D%5Cright%29%20%2B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cmathbf%7Ba%7D%28t%20%2B%20%5CDelta%20t%29%20%5CDelta%20t", alt="velocity-verlet-algorithm-full-step-velocity-equation"/>
-      </div>
+      <br>
+      $$\mathbf{v}(t + \Delta t) = \mathbf{v}\left(t + \frac{\Delta t}{2}\right) + \frac{1}{2} \mathbf{a}(t + \Delta t) \Delta t$$
 
    where:
-   * ![full_step_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%28t%20%2B%20%5CDelta%20t%29) is the full step velocity at time ![full_step_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t)
-   * ![half_step_velocity](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Bv%7D%5Cleft%28t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D%5Cright%29) is the velocity at the half-step ![half_step_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5Cfrac%7B%5CDelta%20t%7D%7B2%7D)
-   * ![full_step_acceleration](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7Ba%7D%28t%20%2B%20%5CDelta%20t%29%20%3D%20%5Cfrac%7B%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29%7D%7Bm%7D) is the acceleration at time ![full_step_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t), where ![full_step_force](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Cmathbf%7BF%7D%28t%20%2B%20%5CDelta%20t%29) is the force acting on the particle/atom (calculated in step 4) at time ![full_step_time](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20t%20%2B%20%5CDelta%20t), and *m* is the mass of the particle/atom
+   * $`\mathbf{v}(t + \Delta t)`$ is the full step velocity at time $`t + \Delta t`$
+   * $`\mathbf{v}\left(t + \frac{\Delta t}{2}\right)`$ is the velocity at the half-step $`t + \frac{\Delta t}{2}`$
+   * $`\mathbf{a}(t + \Delta t) = \frac{\mathbf{F}(t + \Delta t)}{m}`$ is the acceleration at time $`t + \Delta t`$, where $`\mathbf{F}(t + \Delta t)`$ is the force acting on the particle/atom (calculated in step 4) at time $`t + \Delta t`$, and *m* is the mass of the particle/atom
 
       <br>
 
 In MD simulations, because the particles/atoms have a velocity, it is not sufficient to describe the total energy of the system in terms of just potential energy. Due to the motion of atoms/particles, to calculate the total system energy we must also take into account **kinetic energy**. Therefore, total system energy in MD, at time *t*, is given by:
 
    <br>
-   <div align="center">
-      <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20E%28t%29%20%3D%20P_%7BE%7D%28t%29%20%2B%20K_%7BE%7D%28t%29", alt="md-total-system-energy-equation"/>
-   </div>
+   <br>
+   
+   $$E(t) = P_{E}(t) + K_{E}(t)$$
 
 where:
-* ![total)_system_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20E%28t%29) is the total system energy at time *t*
-* ![system_pot_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20P_%7BE%7D%28t%29) is the system potential energy at time *t*
-* ![system_kinetic_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20K_%7BE%7D%28t%29) is the system kinetic energy at time *t*
+* $`E(t)`$ is the total system energy at time $`t`$
+* $`P_{E}(t)`$ is the system potential energy at time $`t`$
+* $`K_{E}(t)`$ is the system kinetic energy at time $`t`$
 
 The system kinetic energy at time *t* is calculated using the velocities obtained by the Velocity Verlet algorithm:
 
    <br>
-   <div align="center">
-      <img src="https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20K_%7BE%7D%28t%29%20%3D%20%5Csum_%7Bi%3D1%7D%5EN%20%5Cfrac%7B1%7D%7B2%7D%20m_i%20v_i%5E2%28t%29", alt="md-system-kinetic-energy-equation"/>
-   </div>
+   <br>
+   
+   $$K_{E}(t) = \sum_{i=1}^N \frac{1}{2} m_i v_i^2(t)$$
 
    where:
-   * ![system_kinetic_energy](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20KE_%7BE%7D%28t%29) is the total kinetic energy of all particles/atoms in the system at time *t*
-   * ![atom_summation](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20%5Csum_%7Bi%3D1%7D%5EN) is the summation of all atoms/particles in the system
-   * ![atom_mass](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20m_i) is the mass of atom *i*
-   * ![atom_velocity_squared](https://latex.codecogs.com/svg.latex?%5Ccolor%7Bwhite%7D%20v_i%5E2%28t%29) is the squared velocity of of atom *i* at time *t*
+   * $`KE_{E}(t)`$ is the total kinetic energy of all particles/atoms in the system at time $`t`$
+   * $`\sum_{i=1}^N`$ is the summation of all atoms/particles in the system
+   * $`m_i`$ is the mass of atom $`i`$
+   * $`v_i^2(t)`$ is the squared velocity of of atom $`i`$ at time $`t`$
 
 ## 5.2 Simulation Commands
 
