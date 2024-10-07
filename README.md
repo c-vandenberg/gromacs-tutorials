@@ -37,9 +37,7 @@
    &nbsp; &nbsp; 7.2.2 [MD Simulation Post-Processing and VMD Processing](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#722-molecular-dynamics-md-simulation-post-processing-and-vmd-processing)<br>
    &nbsp; &nbsp; 7.2.3 [MD Simulation Data Analysis](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#723-molecular-dynamics-md-simulation-data-analysis)<br>
 
-# 1. Gromacs Tutorials
-
-## 1.1 Introduction
+## 1. GROMACS Introduction
 
 GROMACS is a versatile molecular dynamics (MD) package primarily used to perform MD simulations on biochemical molecules such as proteins, lipids and nucleic acids that have a lot of complicated bonded interactions. However, because it is extremely fast at calculating the non-bonded interactions that usually dominate simulations, it is increasingly used in research on non-biological systems such as polymers and fluid dynamics.
 
