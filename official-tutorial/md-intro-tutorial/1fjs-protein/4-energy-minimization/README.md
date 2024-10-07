@@ -1,4 +1,4 @@
-# 4 Energy Minimization
+# 4. Energy Minimization
 
 ## 4.1 Introduction
 
