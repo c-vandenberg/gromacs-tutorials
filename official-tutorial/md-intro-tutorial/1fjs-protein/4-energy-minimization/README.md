@@ -1,6 +1,6 @@
-# 2 Energy Minimization
+# 4 Energy Minimization
 
-## 2.1 Introduction
+## 4.1 Introduction
 
 We have now defined the protein topology, solvent topology and simulation box of our system. We have also ensured our solvated system is electronically neutral. 
 
@@ -68,9 +68,9 @@ However, the main drawback of steepest descent is that it can only find the near
 
 Therefore, steepest descent cannot climb out of the nearest local energy minimum, further explore the PES and find even lower energy minima. To do this, we would need an algorithm that was capable of **uphill steps**, such as **Monte Carlo Simulation**.
 
-## 2.2 Simulation Commands
+## 4.2 Simulation Commands
 
-### 2.2.1 Energy minimisation
+### 4.2.1 Energy minimisation
 1. Before we can begin molecular dynamics, we must ensure that the solvated, electronically neutral system has no steric clashes or inappropriate geometry via energy minimization
 2. Navigate to `1fjs-protein/energy-minimization/data/processed`
 3. We again use `gmx grompp` to generate the atomic-level binary file (`em.tpr`) that GROMACS can use to run energy minimization:
@@ -80,7 +80,7 @@ Therefore, steepest descent cannot climb out of the nearest local energy minimum
 	* `gmx mdrun -v -deffnm em`
 6. To ensure the energy minimization run was successful, in the end output, the potential energy (`epot`) must be negative & on the order of 1e5, and the maximum force `Fmax` < `emtol` (defined in `emin-charmm.mdp`)
 
-### 2.2.2 Energy minimisation Data Analysis
+### 4.2.2 Energy minimisation Data Analysis
 1. Navigate to `1fjs-protein/energy-minimization/data-analysis`
 2. The GROMACS tool `gmx energy` is used for extracting and analysing energy terms from an energy (`.edr`) file 
 3. Pipe in `Potential` string into `gmx energy` command. Again this isn't needed as GROMACS will prompt you for it if you run it without it
@@ -91,6 +91,6 @@ Therefore, steepest descent cannot climb out of the nearest local energy minimum
   <img src="https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/446530fd-7aac-4d4a-9087-8578fa5b4c78" alt="pot-energy-vs-time" width="">
 </div>
 
-## References
+## 4.3 References
 **[1]** Jensen, F. (2017) ‘13. 2 Optimizing General Functions: Finding Minima’, in *Introduction to Computational Chemistry*. 3rd edn. Newark: John Wiley & Sons, Incorporated, pp. 407–408. 
     

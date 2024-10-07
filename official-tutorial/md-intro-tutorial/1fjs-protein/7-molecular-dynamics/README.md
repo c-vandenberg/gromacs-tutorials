@@ -1,8 +1,8 @@
-# 5 Molecular Dynamics Simulation
+# 7 Molecular Dynamics Simulation
 
 https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/d69e786f-1a3f-465b-8d4e-f5483b0788b6
 
-## 5.1 Introduction
+## 7.1 Introduction
 
 After the NVT & NPT equilibration runs, the system is now well-equilibrated at the desired temperature (NVT equilibration) and pressure/density (NPT equilibration). We are now ready to release the position restraints and run the production molecular dynamics simulation for data collection.
 
@@ -97,9 +97,9 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
    * $`m_i`$ is the mass of atom $`i`$
    * $`v_i^2(t)`$ is the squared velocity of of atom $`i`$ at time $`t`$
 
-## 5.2 Simulation Commands
+## 7.2 Simulation Commands
 
-### 5.2.1 Molecular Dynamics (MD) Simulation
+### 7.2.1 Molecular Dynamics (MD) Simulation
 1. The MD simulation parameter file (`md-charmm.mdp`) uses velocity-rescaling temperature coupling as the thermostat and stochastic cell rescaling as the barostat. It also specifies a 1 ns MD simulation
 2. Navigate to `1fjs-protein/data/input/topology/protein` and run:
     * `gmx grompp -f ../../../../molecular-dynamics/data/input/md-charmm.mdp -c ../../../../npt-equilibration/data/processed/npt.gro -t ../../../../npt-equilibration/data/processed/npt.cpt -p topol.top -o md.tpr`
@@ -108,7 +108,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 3. Navigate to `1fjs-protein/molecular-dynamics/data/processed`
     * `gmx mdrun -ntmpi 1 -v -deffnm md`
 
-### 5.2.2 Molecular Dynamics (MD) Simulation Post-Processing and VMD Processing
+### 7.2.2 Molecular Dynamics (MD) Simulation Post-Processing and VMD Processing
 1. For post-processing MD simulation analysis, the first GROMACS tool we will use is `gmx trjconv` which is used to manipulate trajectory files e.g. strip out coordinates, correct for periodicity (i.e. fix any parts of the protein that have extended beyond a simulation box with PBC on one side, and re-entered on the opposite side) or manually alter the trajectory (time units, frame frequency etc.)
 2. The GROMACS documentation has a [suggested workflow](https://manual.gromacs.org/2021/user-guide/terminology.html?highlight=periodic%20boundary) for `gmx trjconv` to fix periodicity effects
 3. We will pipe in the `1\n1\n"` string to select atom 'Group 1' ('Protein') to be centered and atom 'Group 1' ('Protein') to be output to the `center.xtc` file. If we omit this piping GROMACS will prompt us for centering and output groups
@@ -125,7 +125,7 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 10. Once `.ppm` files are generated, navigate to `md-intro-tutorial/scripts` and run:
     * `./vmd_movie_processor.sh <vmd_directory_absolute_path>`
 
-### 5.2.3 Molecular Dynamics (MD) Simulation Data Analysis
+### 7.2.3 Molecular Dynamics (MD) Simulation Data Analysis
 **Protein-Periodic Boundary Minimum Distance**
 1. Another GROMACS MD simulation post-processing tool is `gmx mindist`. This calculates the minimum distance between a given group of atoms and its periodic image (i.e. the distance to the periodic boundary). Here we pipe in `1` for the 'Protein' group:
 	* `printf "1\n" | gmx mindist -s md.tpr -f md_center.xtc -pi -od mindist.xvg`
@@ -177,5 +177,5 @@ The system kinetic energy at time *t* is calculated using the velocities obtaine
 	* `gmx report-methods -s md.tpr`
 
 
- ## References
+ ## 7.3 References
 **[1]** Jensen, F. (2017) ‘15. 2 Time-Dependent Methods’, in *Introduction to Computational Chemistry*. 3rd edn. Newark: John Wiley & Sons, Incorporated, pp. 474–478. 
