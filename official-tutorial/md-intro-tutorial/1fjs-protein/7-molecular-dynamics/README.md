@@ -1,4 +1,4 @@
-# 7 Molecular Dynamics Simulation
+# 7. Molecular Dynamics Simulation
 
 https://github.com/c-vandenberg/gromacs-tutorials/assets/60201356/d69e786f-1a3f-465b-8d4e-f5483b0788b6
 
