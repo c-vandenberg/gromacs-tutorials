@@ -1,10 +1,10 @@
-# GROMACS Molecular Dynamics Introduction Tutorial
+# 2. GROMACS Molecular Dynamics Introduction Tutorial
 
 This GROMACS introductory project is based on the [official GROMACS introduction to molecular dynamics tutorial](https://tutorials.gromacs.org/md-intro-tutorial.html), adapted slightly in directory structure, molecular simulation trajectory analysis and Python/JupyterLab data analysis techniques.
 
 The project involves setting up the topology, energy minimization, NVT & NPT equilibration and finally molecular dynamics simulation of the small protein **Coagulation Factor Xa** in ionized water.
 
-## Introduction
+## 2.1 Introduction
 
 Coagulation Factor X is a serine protease that sits at a pivotal point in the coagulation cascade. It has a role in the three major pathways of the cascade; the intrinsic, extrinsic and common pathways.**<sup>1</sup>**
 
@@ -19,5 +19,5 @@ The order in which the simulation system was built, minimised, equilibrated and 
 4. **NPT Ensemble Equilibration** (`1fjs-protein/npt-equilibration` directory)
 5. **Molecular Dynamics Simulation** (`1fjs-protein/molecular-dynamics` directory)
 
-## References
+## 2.2 References
 [1] Camire, R.M. (2021) 'Blood coagulation factor X: Molecular biology, inherited disease, and engineered therapeutics', *Journal of Thrombosis and Thrombolysis*, 52(2), pp. 383–390.<br>

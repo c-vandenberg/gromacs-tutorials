@@ -1,10 +1,10 @@
-# gromacs-tutorials
+# 1. Gromacs Tutorials
 
-## Introduction
+## 1.1 Introduction
 
 GROMACS is a versatile molecular dynamics (MD) package primarily used to perform MD simulations on biochemical molecules such as proteins, lipids and nucleic acids that have a lot of complicated bonded interactions. However, because it is extremely fast at calculating the non-bonded interactions that usually dominate simulations, it is increasingly used in research on non-biological systems such as polymers and fluid dynamics.
 
-### GROMACS Installation
+### 1.2 GROMACS Installation
 1. All commands are for Debian-based distros
 2. Check C and C++ compilers versions (`gcc --version` and `g++ --version`)
 3. If these are not up to date with the latest version, install latest versions via following commands
