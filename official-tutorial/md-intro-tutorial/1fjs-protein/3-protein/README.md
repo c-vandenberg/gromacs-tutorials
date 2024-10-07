@@ -1,4 +1,4 @@
-# 3. Generating Topologies, Defining Simulation Box & Solvating System
+# 3. Generating Protein Topologies, Defining Simulation Box & Solvating System
 
 
 <div align="center">
