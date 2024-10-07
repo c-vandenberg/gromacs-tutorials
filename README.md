@@ -1,7 +1,8 @@
+# GROMACS Tutorials
+
 ## Contents
-1. [Gromacs Tutorials](https://github.com/c-vandenberg/gromacs-tutorials#1-gromacs-tutorials)<br>
-  1.1 [Introduction](https://github.com/c-vandenberg/gromacs-tutorials#11-introduction)<br>
-  1.2 [GROMACS Installation](https://github.com/c-vandenberg/gromacs-tutorials#12-gromacs-installation)<br>
+1. [GROMACS Introduction](https://github.com/c-vandenberg/gromacs-tutorials#11-introduction)<br>
+  1.1 [GROMACS Installation](https://github.com/c-vandenberg/gromacs-tutorials#12-gromacs-installation)<br>
 2. [GROMACS Molecular Dynamics Introduction Tutorial](https://github.com/c-vandenberg/gromacs-tutorials/tree/master/official-tutorial/md-intro-tutorial#2-gromacs-molecular-dynamics-introduction-tutorial)<br>
   2.1 [Introduction](https://github.com/c-vandenberg/gromacs-tutorials/tree/master/official-tutorial/md-intro-tutorial#21-introduction)<br>
   2.2 [References](https://github.com/c-vandenberg/gromacs-tutorials/tree/master/official-tutorial/md-intro-tutorial#22-references)<br>
