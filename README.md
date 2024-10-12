@@ -33,9 +33,9 @@
 7. [Molecular Dynamics (MD) Simulation](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#7-molecular-dynamics-simulation)<br>
    7.1 [Introduction](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#71-introduction)<br>
    7.2 [Simulation Commands](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#72-simulation-commands)<br>
-   &nbsp; &nbsp; 7.2.1 [MD Simulation](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#721-molecular-dynamics-md-simulation)<br>
-   &nbsp; &nbsp; 7.2.2 [MD Simulation Post-Processing and VMD Processing](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#722-molecular-dynamics-md-simulation-post-processing-and-vmd-processing)<br>
-   &nbsp; &nbsp; 7.2.3 [MD Simulation Data Analysis](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#723-molecular-dynamics-md-simulation-data-analysis)<br>
+   &nbsp; &nbsp; 7.2.1 [MD Simulation](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#721-md-simulation)<br>
+   &nbsp; &nbsp; 7.2.2 [MD Simulation Post-Processing and VMD Processing](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#722-md-simulation-post-processing-and-vmd-processing)<br>
+   &nbsp; &nbsp; 7.2.3 [MD Simulation Data Analysis](https://github.com/c-vandenberg/gromacs-tutorials/blob/master/official-tutorial/md-intro-tutorial/1fjs-protein/7-molecular-dynamics/README.md#723-md-simulation-data-analysis)<br>
 
 ## 1. GROMACS Introduction
 
